@@ -1,50 +1,76 @@
-# Welcome to your Expo app 👋
+# 🏥 Hospital Queue Prediction App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile application built with **React Native (Expo)** that allows patients to view real-time clinic queues and receive a **predicted waiting time estimation** based on the number of people currently in line.
 
-## Get started
+---
 
-1. Install dependencies
+## 📌 Overview
 
-   ```bash
-   npm install
-   ```
+Hospital Queue Prediction is designed to help patients avoid long and uncertain waiting times at healthcare facilities. Through this application, users can:
 
-2. Start the app
+- View available clinics (poliklinik).
+- See the current number of patients in each queue.
+- Register for a queue directly from the app.
+- View their queue number and registration time.
+- Receive an estimated waiting time.
+- Track queue movement in real time.
 
-   ```bash
-   npx expo start
-   ```
+This application uses **Firebase Authentication**, **Firestore**, and **Firebase Realtime Database** for data management and live updates.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🚀 Key Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🔐 User Authentication
+- Login and registration using **Firebase Auth** (email & password).
 
-## Get a fresh project
+### 🏥 Clinic List
+- Displays available clinics along with their total queue count.
 
-When you're ready, run:
+### 🧾 Queue Registration
+- Users can join a queue for any clinic.
+- Stores queue number, clinic ID, patient ID, and registration time.
 
-```bash
-npm run reset-project
-```
+### ⏳ Waiting Time Prediction
+- Estimated waiting time based on:
+  estimation = total_queue × average_service_time
+- Can be extended with more advanced logic or future ML models.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 🔄 Real-Time Queue Updates
+- Uses **Firebase Realtime Database** for instant queue changes without refreshing.
 
-## Learn more
+### 📱 Modern UI/UX
+- Built using React Native Hooks and modular components.
+- Fully responsive and optimized for Android devices.
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🛠️ Tech Stack
 
-## Join the community
+| Technology | Purpose |
+|-----------|---------|
+| **React Native (Expo)** | Mobile app interface |
+| **Firebase Auth** | User authentication |
+| **Firestore** | User data (optional) |
+| **Firebase Realtime Database** | Real-time queue updates |
+| **JavaScript / TypeScript** | App logic |
+| **Expo Router** | Navigation |
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 🔧 Installation & Setup
+
+### 1. Clone the Repository
+git clone https://github.com/airinr/hospital_queue_prediction.git
+cd hospital_queue_prediction  
+
+### 2. Clone the Repository
+npm install
+
+### 3. Start the App
+npx expo start
+
+### 4. Open on Device
+Scan the QR code using the Expo Go app.
+
